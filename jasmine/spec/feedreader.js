@@ -111,11 +111,11 @@ $(function() {
             $('.feed').empty();
 
             loadFeed(0, function() {
-                var entry1 = $('.entry').find('h2').text();
+                entry1 = $('.entry').find('h2').text();
             });
 
             loadFeed(1, function() {
-                var entry2 = $('.entry').find('h2').text();
+                entry2 = $('.entry').find('h2').text();
                 done();
             });
          });
