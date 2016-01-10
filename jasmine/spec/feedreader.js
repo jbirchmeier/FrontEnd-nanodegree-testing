@@ -65,6 +65,7 @@ $(function() {
                 entry1 = $('.entry').find('h2').text();
                 loadFeed(1, function() {
                     entry2 = $('.entry').find('h2').text();  
+                    done();
                 });
             });
          });
