@@ -1,6 +1,8 @@
 This project was created as part of Udacity's Front End Nanodegree program. The project is to utilize Jasmine testing. 
 
-To use the program, click the hamburger menu at the top left of the screen and choose a particular feed. 
+
+To use the program, first open the index.html file. 
+Click the hamburger menu at the top left of the screen and choose a particular feed. 
 Once you choose a feed you can then click on a specific blog post and read about that topic. 
 
 You can change to a new feed at any time by clicking the hamburger menu again. 

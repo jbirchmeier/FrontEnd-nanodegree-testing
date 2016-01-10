@@ -7,12 +7,20 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-        //ensure each entry has a title and a URL that are not empty
-        var i;
+        //ensure each entry has a title that is not empty
         it('has URL', function() {
             for(i=0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].url).toBeDefined();
                 expect(allFeeds[i].url.length).not.toBe(0);
+            }
+        });
+
+        //ensure each entry has a title that is not empty
+        var i;
+        it('has a name', function() {
+            for(i=0; i < allFeeds.length; i++) {
+                expect(allFeeds[i].name).toBeDefined();
+                expect(allFeeds[i].name.length).not.toBe(0);
             }
         });
     });
