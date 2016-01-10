@@ -36,36 +36,35 @@ $(function() {
             var menu = $('.menu-icon-link');
             var body = $('body');
 
-            menu.click()
+            menu.click();
             expect(body.hasClass('menu-hidden')).toBe(false);
 
-            menu.click()
+            menu.click();
             expect(body.hasClass('menu-hidden')).toBe(true);
         });
     });
 
     /* Test that the first feed has at least one entry when the page loads*/
     describe('Initial Entries', function() {
-         beforeEach(function(done){
+        beforeEach(function(done){
             loadFeed(0, done);
-         });
+        });
 
-         it('should grab initial entries', function() {
+        it('should grab initial entries', function() {
             var entries = $('.entry');
             expect(entries.length).toBeGreaterThan(0);
-         });
+        });
     });
     /* Test that when a feed is changed, that the entries appear and change with it*/
     describe('New Feed Selection', function() {
-
-         beforeEach(function(done){
+        var entry1, entry2;
+        beforeEach(function(done){
             $('.feed').empty();
 
             loadFeed(0, function() {
                 entry1 = $('.entry').find('h2').text();
                 loadFeed(1, function() {
-                    entry2 = $('.entry').find('h2').text();
-                    done();
+                    entry2 = $('.entry').find('h2').text();  
                 });
             });
          });
